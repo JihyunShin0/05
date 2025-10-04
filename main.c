@@ -3,18 +3,24 @@
 
 int main(int argc, char *argv[])
 {
-    int x;
-    int i;
-    int sum = 0;
+    int a, b;
+    char c;
+    int result;
     
-    printf("Input an integer : ");
-    scanf("%d", &x);
+    printf("enter the calculation : ");
+    scanf("%d %c %d", &a, &c, &b);
     
-    for ( i = 1 ; i <= x ; i++ )
-        sum = sum + i;
+    if (c == '+')
+       result = a+b;
+    else if (c == '-')
+       result = a-b;
+    else if (c == '*')
+       result = a*b;
+    else if (c == '/')
+       result = a/b;
     
-    printf("sum is %i.\n", sum);
-  
+    printf("= %d\n", result);
+
     system("PAUSE");	
     return 0;
 }
